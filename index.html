@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="style/main.css" type="text/css"/>
 </head>
 <body>
-<div id="container">
-    <div id="header"><a href="index.html" title="Главная страница"> <img src="img/logo_text.png" alt="index" width="600"
-                                                                         height="200" border="0"/> </a>
+<div id="body">
+    <div id="header">
+        <a href="index.html" title="Главная страница">
+            <img src="img/logo_text.png" alt="index" width="600" height="200" border="0"/>
+        </a>
         <div>
-            <p class="red">м.Соснівка</br>
+            <p class="red">м.Соснівка<br>
                 Львівська обл. Україна</p>
-            <p class="grey">вул. хорошая </br>
+            <p class="grey">вул. хорошая <br>
                 Телефон нокиа</p>
         </div>
         <a href="#" title="Members Login" class="login">Вітаю <span>гість</span></a>
@@ -45,68 +47,117 @@
               </ul>
           </div>
           -->
-    <!--left start -->
-    <div id="body">
-        <table id="tablesdtyle" >
-            <tr>
-                <td id="sidebar1">
-                    <div id="left">
-                        <h2><span>Головне меню</span></h2>
-                        <ul>
-                            <li><a href="#"><span class="nor">jul</span><span class="bg">01</span>Головна сторінка</a>
-                            </li>
-                            <li><a href="#"><span class="nor">jul</span><span class="bg">03</span>Про Нас</a></li>
-                            <li><a href="#"><span class="nor">jul</span><span class="bg">04</span>Новини</a></li>
-                        </ul>
-                    </div>
-                </td>
+    <div id="container">
+        <div id="left">
+            <h2><span>Головне меню</span></h2>
+            <ul>
+                <li><a href="#"><span class="nor">jul</span><span class="bg">01</span>Головна сторінка</a></li>
+                <li><a href="#"><span class="nor">jul</span><span class="bg">03</span>Про Нас</a></li>
+                <li><a href="#"><span class="nor">jul</span><span class="bg">04</span>Новини</a></li>
+            </ul>
+        </div>
+        <div id="right">
+            <div class="loginform">
+                <h2><span>Members Login</span></h2>
+                <form name="memberLogin" action="#" method="post">
+                    <label>Enter Your Name</label>
+                    <input type="text" name="name" class="txtBox"/>
+                    <label>Enter Your Password</label>
+                    <input type="password" name="password" class="txtBox"/>
+                    <a href="#">Forget Password</a>
+                    <input type="submit" name="login" value="Login" class="login"/>
+                    <br class="spacer"/>
+                </form>
+            </div>
+            <div class="blog">
+                <h2>Оголошення</h2>
+                <ul class="head">
+                    <li>kibero ligulain leced smd, diam in prta</li>
+                </ul>
+                <p>In lobortis neque eu orciM ulla aliquam adipiscing massa ulla. Suspendisse nulla.
+                    Aliquam</p>
+                <ul class="head">
+                    <li>blandit molestie em orci, feugiat id, ullorper</li>
+                </ul>
+                <p class="padBottom">pulvinar viverra.Sedftueleilpu lputaligulaeleifturpis,eleifend ut,
+                    viverraon,</p>
+            </div>
+        </div>
+        <div id="main">
+            <h2>hello word</h2>
+            <div class="item">
+                <div class="item_img">
+                    <img src="img/primer.jpg" alt="пример">
+                </div>
+                <h2>Название темы</h2>
+                <p>
+                    тут будет текст
+                </p>
+                <div class="clear"></div>
+                <a class="item_url" href="#">Подробней</a>
+                <br>
+                <div class="item_info">
+                    <ul>
+                        <li>
+                            <img src="img/icon_user.png" alt="">
+                        </li>
+                        <li>автор</li>
+                        <li>0 комментариев</li>
+                        <li>
+                            <a href="#">tag</a>
+                        </li>
+                        <li>
+                            <a href="#">tag</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item_img">
+                    <img src="img/primer.jpg" alt="пример">
+                </div>
+                <h2>Название темы</h2>
+                <p>
+                    тут будет текст
+                </p>
+                <div class="clear"></div>
+                <a class="item_url" href="#">Подробней</a>
+                <br>
+                <div class="item_info">
+                    <ul>
+                        <li>
+                            <img src="img/icon_user.png" alt="">
+                        </li>
+                        <li>автор</li>
+                        <li>0 комментариев</li>
+                        <li>
+                            <a href="#">tag</a>
+                        </li>
+                        <li>
+                            <a href="#">tag</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="pagination">
+            <span>Первая</span>
+            <span>Предыдущая</span>
+            <span>1</span>
+            <a href="#">2</a>
+            <a href="#" title="Следующая">Следующая</a>
+            <a href="#" title="Последняя">Последняя</a>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
 
-                <td id="sidebar2">
-                    <div id="center">
-                        hello word
-                    </div>
-                </td>
-
-
-                <td id="sidebar3">
-                    <div id="right">
-
-                        <div class="loginform">
-                            <h2><span>Members Login</span></h2>
-                            <form name="memberLogin" action="#" method="post">
-                                <label>Enter Your Name</label>
-                                <input type="text" name="name" class="txtBox"/>
-                                <label>Enter Your Password</label>
-                                <input type="password" name="password" class="txtBox"/>
-                                <a href="#">Forget Password</a>
-                                <input type="submit" name="login" value="Login" class="login"/>
-                                <br class="spacer"/>
-                            </form>
-                        </div>
-                        <div class="blog">
-                            <h2>Оголошення</h2>
-                            <ul class="head">
-                                <li>kibero ligulain leced smd, diam in prta</li>
-                            </ul>
-                            <p>In lobortis neque eu orciM ulla aliquam adipiscing massa ulla. Suspendisse nulla.
-                                Aliquam</p>
-                            <ul class="head">
-                                <li>blandit molestie em orci, feugiat id, ullorper</li>
-                            </ul>
-                            <p class="padBottom">pulvinar viverra.Sedftueleilpu lputaligulaeleifturpis,eleifend ut,
-                                viverraon,</p>
-                        </div>
-                    </div>
-            </tr>
-
-            </td>
-            </tr>
-        </table>
-
+<footer id="containerfooter" class="footerclass" role="contentinfo">
+    <div class="container">
+        <p>Copyright &copy; 2017 молодь - Усі права захищено. <span style="color: #ffffff;"></span></p>
 
     </div>
-    <!--left end -->
-</div>
-</div>
+</footer>
 </body>
 </html>
