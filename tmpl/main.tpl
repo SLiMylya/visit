@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
 <head>
-    <title>Соснівка</title>
+    <title><?=$this->title?></title>
     <meta charset="UTF-8">
-    <meta name="description" content="Описание сайта"/>
-    <meta name="keywords" content="поисковые теги"/>
+    <meta name="description" content="<?=$this->meta_desc?>"/>
+    <meta name="keywords" content="<?=$this->meta_key?>"/>
     <link rel="stylesheet" href="style/main.css" type="text/css"/>
 </head>
 <body>
 <div id="body">
     <div id="header">
-        <!--
-     <a href="index.html" title="Главная страница">
-         <img src="img/logo_text.png" alt="index" width="600" height="200" border="0"/>
-     </a>
-     -->
-        <a href="#" title="Members Login" class="login">Вітаю <span>гість</span></a>
+        <a href="<?=$this->link_user?>" title="Members Login" class="login">Вітаю <span><?=$this->user_name?></span></a>
         <div id="text_adress">
             <p class="red">м.Соснівка<br>
                 Львівська обл. Україна</p>
@@ -36,19 +31,7 @@
             </ul>
         </div>
     </div>
-    <!--
-          <div id="menuselect">
-              <ul class="sub">
-                  <li><a href="#">Who We Are</a></li>
-                  <li><a href="#">What Our Future</a></li>
-                  <li><a href="#">Forum</a></li>
-                  <li><a href="#">Company Profiles</a></li>
-                  <li><a href="#">Communications</a></li>
-                  <li><a href="#">Importance</a></li>
-                  <li class="noImg"><a href="#">Finance</a></li>
-              </ul>
-          </div>
-          -->
+
     <div id="container">
         <div id="left">
             <div>
@@ -157,70 +140,9 @@
             </div>
         </div>
         <div id="main">
-            <h2>hello word</h2>
-            <div class="item">
-                <div class="item_img">
-                    <img src="img/primer.jpg" alt="пример">
-                </div>
-                <h2>Название темы</h2>
-                <p>
-                    тут будет текст
-                </p>
-                <div class="clear"></div>
-                <a class="item_url" href="#">Подробней</a>
-                <br>
-                <div class="item_info">
-                    <ul>
-                        <li>
-                            <img src="img/icon_user.png" alt="">
-                        </li>
-                        <li>автор</li>
-                        <li>0 комментариев</li>
-                        <li>
-                            <a href="#">tag</a>
-                        </li>
-                        <li>
-                            <a href="#">tag</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="item">
-                <div class="item_img">
-                    <img src="img/primer.jpg" alt="пример">
-                </div>
-                <h2>Название темы</h2>
-                <p>
-                    тут будет текст
-                </p>
-                <div class="clear"></div>
-                <a class="item_url" href="#">Подробней</a>
-                <br>
-                <div class="item_info">
-                    <ul>
-                        <li>
-                            <img src="img/icon_user.png" alt="">
-                        </li>
-                        <li>автор</li>
-                        <li>0 комментариев</li>
-                        <li>
-                            <a href="#">tag</a>
-                        </li>
-                        <li>
-                            <a href="#">tag</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="clear"></div>
-        <div id="pagination">
-            <span>Первая</span>
-            <span>Предыдущая</span>
-            <span>1</span>
-            <a href="#">2</a>
-            <a href="#" title="Следующая">Следующая</a>
-            <a href="#" title="Последняя">Последняя</a>
+            <?php include "content_".$this->content.".tpl"; ?>
+
+
         </div>
     </div>
 </div>
