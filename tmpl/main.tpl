@@ -19,17 +19,10 @@
         </div>
         <div id="menu_top">
             <ul class="nav">
-                <li><a href="#" class="hover">Головна сторінка</a></li>
-                <li><a href="#">Про Нас</a></li>
-                <li><a href="#">Новини</a></li>
-                <li><a href="#">Регіон</a></li>
-                <li><a href="#">Служіння</a></li>
-                <li><a href="#">Недільна школа</a></li>
-                <li><a href="#">Планування</a></li>
-                <li><a href="#">Зв'язатись</a></li>
-                <li><a href="#">Зв'язатись</a></li>
+                <?php include "menu.tpl"; ?>
             </ul>
         </div>
+        <div class="clear">
     </div>
 
     <div id="container">
@@ -37,9 +30,7 @@
             <div>
                 <h2><span>Головне меню</span></h2>
                 <ul>
-                    <li><a href="#"><span class="nor">jul</span><span class="bg">01</span>Головна сторінка</a></li>
-                    <li><a href="#"><span class="nor">jul</span><span class="bg">03</span>Про Нас</a></li>
-                    <li><a href="#"><span class="nor">jul</span><span class="bg">04</span>Новини</a></li>
+                    <?php include "menu.tpl"; ?>
                 </ul>
             </div>
             <div>

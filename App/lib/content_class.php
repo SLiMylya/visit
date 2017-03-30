@@ -16,6 +16,7 @@ class Content extends Modules {
 
     protected function getContent() {
         $this->template->set("table_products_title", "Новинки");
+        $this->template->set("menu", $this->menu->getAllData());
         $this->template->set("product", $this->product->getAllData(
             $this->config->count_on_page
         ));

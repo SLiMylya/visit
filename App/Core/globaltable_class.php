@@ -1,4 +1,10 @@
 <?php
+namespace App\Core;
+use App\Config;
+use App\Util\Check;
+use App\Util\Format;
+use App\Util\Url;
+
 
 /**
  * Created by PhpStorm.
@@ -7,10 +13,8 @@
  * Time: 15:34
  */
 
-require_once "database_class.php";
-require_once "config_config.php";
-require_once "check_class.php";
-require_once "url_class.php";
+require_once "App/Core/database_class.php";
+require_once "App/Util/check_class.php";
 
 abstract class GlobalTable {
 
@@ -34,9 +38,11 @@ abstract class GlobalTable {
         $this->table_name = $this->config->db_prefix.$table_name;
     }
 
-    protected function getAll($order = false, $up=true, $count=false, $offset=false) {
+    public function getAll($order = false, $up=true, $count=false, $offset=false) {
         $ol = $this->getOrderLimit($order, $up, $count, $offset);
-        $query="SELECT * FROM`".$this->table_name." $ol";
+        $query="SELECT * FROM `".$this->table_name."` $ol";
+        //TODO запрос в бд
+//        echo $query;
         return $this->db->select($query);
     }
 
@@ -46,15 +52,27 @@ abstract class GlobalTable {
         return $this->db->select($query, array($value));
     }
 
-    public function getOrderLimit($order, $up, $count, $offset) {
+    protected function getOrderLimit($order, $up, $count, $offset) {
         if ($order){
             $order="ORDER BY `$order`";
             if (!$up) $order .= " DESC";
         }
-
         $limit = $this->getLimit($count, $offset);
 
         return "$order $limit";
+    }
+
+    private function getLimit($count, $offset) {
+        $limit = "";
+        if ($count) {
+            if(!$this->check->count($count)) return false;
+            if ($offset){
+                if(!$this->check->offset($offset)) return false;
+                $limit = "LIMIT $offset, $count";
+            }
+            else $limit = "LIMIT $count";
+        }
+        return $limit;
     }
 
     protected function transformLink($element) {
@@ -70,19 +88,6 @@ abstract class GlobalTable {
     }
 
     abstract function transformElement($element);
-
-    private function getLimit($count, $offset) {
-        $limit = "";
-        if ($count) {
-            if(!$this->check->count($count)) return false;
-            if ($offset){
-                if(!$this->check->offset($offset)) return false;
-                $limit = "LIMIT $offset, $count";
-            }
-            else $limit = "LIMIT $count";
-        }
-        return $limit;
-    }
 
 
 

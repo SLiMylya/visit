@@ -102,37 +102,6 @@ body{
     cursor: text;
 }
 
-/*
-
-.sub{
-    width:892px;
-    height:29px;
-    padding:0 0 0 48px;
-    float:left;
-    margin-top: 0px;
-    margin-left: 200px;
-}
-.sub li{
-    float:left;
-    background:url(../img/nav_div.gif) right top no-repeat;
-    padding:0 2px 0 0;
-    list-style-type: none;
-}
-
-.sub li a{
-    padding:0 14px;
-    font:normal 11px/29px Arial, Helvetica, sans-serif;
-    color:#1F2123;
-    background-color:inherit;
-    text-decoration:none;
-
-}
-.sub li a:hover{
-    color:#B70D0D;
-    background-color:inherit;
-}
-*/
-
 #container {
     width: 100%;
 }
@@ -373,4 +342,8 @@ body{
 #pagination {
     margin-top: 20px;
     text-align: center;
+}
+
+.menu li{
+    text-decoration:none;
 }

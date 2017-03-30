@@ -1,4 +1,6 @@
 <?php
+namespace App\Util;
+use App\Config;
 
 /**
  * Created by PhpStorm.
@@ -7,12 +9,13 @@
  * Time: 11:51
  */
 
-require_once "config_config.php";
+
 
 class Format {
     private $config;
 
     public function __construct() {
+        //TODO удалить
         $this->config = new Config();
     }
 

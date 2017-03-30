@@ -1,5 +1,5 @@
 <?php
-
+namespace App\Core;
 /**
  * Created by PhpStorm.
  * User: SLiM

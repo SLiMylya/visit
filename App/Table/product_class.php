@@ -6,9 +6,11 @@
  * Date: 22.01.2017
  * Time: 16:13
  */
+use App\Core\GlobalTable;
+
+require_once "App/Core/globaltable_class.php";
+
 class Product extends GlobalTable {
-
-
     /**
      * Product constructor.
      */

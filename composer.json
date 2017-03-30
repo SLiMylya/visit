@@ -1,0 +1,25 @@
+{
+  "name": "SLiM/lib",
+  "description": "description_text",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "author's name",
+      "email": "email@example.com"
+    }
+  ],
+  "require-dev": {
+    "phpunit/phpunit": "5.5.*"
+  },
+
+  "autoload":{
+    "classmap":[
+      "App",
+      "App/Core",
+      "App/Message",
+      "App/Table",
+      "App/Util"
+    ]
+  }
+}

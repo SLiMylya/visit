@@ -1,4 +1,6 @@
 <?php
+namespace App\Util;
+use App\Config;
 
 /**
  * Created by PhpStorm.
@@ -6,13 +8,13 @@
  * Date: 22.01.2017
  * Time: 12:34
  */
-require_once "config_config.php";
 
 class Check {
 
+    //TODO delete
     private $config;
 
-    public function __construct($amp = true) {
+    public function __construct() {
         $this->config = new Config();
     }
 

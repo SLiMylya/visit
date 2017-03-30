@@ -6,12 +6,17 @@
  * Date: 22.01.2017
  * Time: 17:33
  */
-require_once "config_config.php";
-require_once "url_class.php";
-require_once "format_class.php";
-require_once "template_class.php";
-require_once "section_class.php";
-require_once "product_class.php";
+use App\Config;
+use App\Core\Template;
+use App\Util\Format;
+use App\Util\Url;
+
+require_once "App/config_class.php";
+require_once "App/Util/url_class.php";
+require_once "App/Util/format_class.php";
+require_once "App/Core/template_class.php";
+require_once "App/Table/menu_class.php";
+require_once "App/Table/product_class.php";
 
 
 abstract class Modules {
@@ -21,6 +26,8 @@ abstract class Modules {
     protected $url;
     protected $format;
     protected $product;
+    protected $menu;
+    protected $template;
 
 
     /**
@@ -31,6 +38,7 @@ abstract class Modules {
         $this->config=new Config();
         $this->url = new Url();
         $this->format = new Format();
+        $this->menu = new Menu();
         $this->product = new Product();
         $this->data = $this->format->xss($_REQUEST);
 

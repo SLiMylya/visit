@@ -1,4 +1,7 @@
 <?php
+namespace App\Message;
+use App\Config;
+
 
 /**
  * Created by PhpStorm.
@@ -6,8 +9,6 @@
  * Date: 22.01.2017
  * Time: 13:51
  */
-require_once "config_config.php";
-
 abstract class GlobalMessage {
     private $data;
 

@@ -1,4 +1,6 @@
 <?php
+namespace App\Message;
+use App\Config;
 
 /**
  * Created by PhpStorm.
@@ -6,9 +8,6 @@
  * Date: 22.01.2017
  * Time: 14:16
  */
-
-require_once "config_config.php";
-require_once "email_class.php";
 
 class Mail {
 
@@ -28,14 +27,14 @@ class Mail {
         if($from=="") $from = $this->config->ademail;
         $subject=$this->email->getTitle($template);
         $message=$this->email->getText($template);
-        $header = "From: $from\r\nReply-To: $from\r\nContent-type: text/html; charset=utf-8r\r\n";
+        $headers = "From: $from\r\nReply-To: $from\r\nContent-type: text/html; charset=utf-8r\r\n";
 
         foreach ($data as $key => $value) {
             $subject = str_replace("%$key%", $value, $subject);
             $message = str_replace("%$key%", $value, $message);
         }
         $subject = '=?utf-8?B?' . base64_encode($subject) . '?=';
-        return mail($to, $subject, $message, $header);
+        return mail($to, $subject, $message, $headers);
     }
 
 }
